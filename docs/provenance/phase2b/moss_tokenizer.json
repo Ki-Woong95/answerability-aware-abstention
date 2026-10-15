@@ -1,0 +1,10 @@
+{
+  "model": "moss",
+  "tokenizer_path": "models/moss",
+  "slow": true,
+  "tokenizer_fingerprint": "574dc0f56816efa35de974e84f4a0757cc2759541b91d0b89ed2745848c760f5",
+  "fixtures_passed": 5,
+  "native_stop_token_ids": {},
+  "byte_decode_verified": true,
+  "model_inference": false
+}

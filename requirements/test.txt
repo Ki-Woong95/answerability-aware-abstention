@@ -1,0 +1,7 @@
+# Install a compatible PyTorch build separately.
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+pandas==2.3.3
+soundfile==0.14.0
+openai==3.13.0

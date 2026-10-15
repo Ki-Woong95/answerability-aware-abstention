@@ -1,0 +1,18 @@
+SEEDS = (17, 29, 43)
+
+SENTENCE_BOUNDARY_CHARS = ".?!"
+
+GATE_HIDDEN_DIM = 64
+GATE_EPOCHS = 20
+GATE_LR = 1e-3
+GATE_WEIGHT_DECAY = 1e-4
+
+TRAJECTORY_AGGREGATION = "cumulative_mean"
+TRAJECTORY_SCORE = "max_cumulative_mean"
+
+LAYER_SELECTION_METRIC = "validation_trajectory_auc"
+LAYER_TIE_BREAK = "lower_layer"
+
+TARGET_A_FALSE_BRAKE = 0.05
+
+MAX_NEW_TOKENS = 2048

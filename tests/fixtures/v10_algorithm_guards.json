@@ -1,0 +1,31 @@
+{
+  "purpose": "Static guards only; do not execute training or calibration functions",
+  "checks": [
+    {
+      "path": "src/gate/model.py",
+      "selector": "module",
+      "ast_sha256": "8db69e3f4cca1dc0ab4ff583f096f1ce25d9aa13db404c0feb972f4c4e2accac"
+    },
+    {
+      "path": "src/gate/train_all_layers.py",
+      "selector": "train_one_pair",
+      "ast_sha256": "2e1f6eccab80364f42fa5db50751c7ab1e07975c92047e4cc05a670f30331c88"
+    },
+    {
+      "path": "src/gate/policy.py",
+      "selector": "cumulative_mean",
+      "ast_sha256": "35be95b6aa9dc9e276bb39f6386756370f8f47fe85149758bf3ad8e4e6be9437"
+    },
+    {
+      "path": "src/gate/policy.py",
+      "selector": "first_brake",
+      "ast_sha256": "fd532bf3e358f756c983e10d499e267d95426937d935500f4629c94883cd0823"
+    },
+    {
+      "path": "src/gate/calibrate_tau5.py",
+      "selector": "calibrate_tau5_ltt",
+      "ast_sha256": "6fddebea3eaecf32fe1234de53517fc55c15db534a4b531d5023623ce05738dd"
+    }
+  ],
+  "normalization": "Canonical AST fields, ignoring only empty type_params; independent of ast.dump formatting across Python versions."
+}

@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "2fab9640451dfd4b51ad3f342213bd926c1cffe1",
+  "source_url": "https://github.com/nju-websoft/AbstentionReasoning/blob/2fab9640451dfd4b51ad3f342213bd926c1cffe1/codes/main_vllm.py",
+  "source_sha256": "38f22c5a7e106e6b64f10964816fb1ced38ef794b59bad7e0a9881a52858dc81",
+  "license": "GPL-3.0",
+  "documentation_only": true,
+  "prompt_builder": "build_input_text(question, with_confidence=False)",
+  "exact_prompt_template": "{question} Let's think step by step and output the final answer within \\boxed{}. Please solve the problem strictly based on the information provided. Do not introduce any additional assumptions. If you believe the problem lacks sufficient information or is unsolvable, first reply with \\boxed{I don't know.}, and provide your corresponding reason in the format:  Reason{your explanation here}",
+  "BASE_REASONING_PROMPT": "Let's think step by step and output the final answer within \\boxed{}.",
+  "ABSTENTION_PROMPT": "Please solve the problem strictly based on the information provided. Do not introduce any additional assumptions. If you believe the problem lacks sufficient information or is unsolvable, first reply with \\boxed{I don't know.}, and provide your corresponding reason in the format:  Reason{your explanation here}",
+  "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/download/40496/44457",
+  "paper_locator": "Figure 3, second PDF page (printed page 32232)",
+  "paper_vs_release": "The paper uses typographic apostrophes and the ending and then provide ... format: Reason {your explanation here}.; the released code uses ASCII apostrophes, omits then, has two spaces after format:, uses Reason{...}, and has no final period. The stored exact_prompt_template is the released-code string, not a claim of byte identity with the typeset paper."
+}

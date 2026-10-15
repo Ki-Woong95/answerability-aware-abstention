@@ -1,0 +1,12 @@
+{
+  "path": "data/splits/umwp_final_split.json",
+  "sha256": "9c6d0b2873a6a0d4db5d50230402de06ccae600c20ceb7c4de2dece6dee4140b",
+  "counts": {
+    "gate_train": 1423,
+    "calibration": 360,
+    "val": 386,
+    "test": 387
+  },
+  "retained_pair_count": 2556,
+  "test_performance_accessed": false
+}

@@ -1,0 +1,10 @@
+{
+  "model": "audio-reasoner",
+  "tokenizer_path": "models/audio-reasoner",
+  "slow": false,
+  "tokenizer_fingerprint": "653315f257c5f27e23822546649c90eb78d01bcf0c9c56eae7db23832f6298f4",
+  "fixtures_passed": 5,
+  "native_stop_token_ids": {},
+  "byte_decode_verified": true,
+  "model_inference": false
+}

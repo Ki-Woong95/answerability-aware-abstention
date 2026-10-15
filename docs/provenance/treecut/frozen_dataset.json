@@ -1,0 +1,69 @@
+{
+  "dataset": "treecut",
+  "status": "frozen",
+  "seed": 17,
+  "grouping": "unique latent family; one A/one U per family",
+  "counts": {
+    "gate_train": 2781,
+    "calibration": 703,
+    "val": 755,
+    "test": 756
+  },
+  "stratum_counts": {
+    "(2, 2, False)": {
+      "gate_train": 464,
+      "calibration": 117,
+      "val": 126,
+      "test": 126
+    },
+    "(2, 2, True)": {
+      "gate_train": 464,
+      "calibration": 117,
+      "val": 126,
+      "test": 126
+    },
+    "(4, 2, False)": {
+      "gate_train": 464,
+      "calibration": 117,
+      "val": 126,
+      "test": 126
+    },
+    "(4, 2, True)": {
+      "gate_train": 462,
+      "calibration": 117,
+      "val": 125,
+      "test": 126
+    },
+    "(4, 4, False)": {
+      "gate_train": 464,
+      "calibration": 118,
+      "val": 126,
+      "test": 126
+    },
+    "(4, 4, True)": {
+      "gate_train": 463,
+      "calibration": 117,
+      "val": 126,
+      "test": 126
+    }
+  },
+  "retained_pairs": 4995,
+  "candidate_pairs": 5000,
+  "excluded_duration_pairs": 5,
+  "raw_recordings": 9990,
+  "active_trials": 9287,
+  "umwp_exact_text_overlap": 0,
+  "scope": "fresh matched generation using pinned native TreeCut A templates",
+  "protected_sha256": {
+    "data/splits/treecut_final_split.json": "df896eb1d59ef6e66b1a203fe204cc90064d7390c1f92915f0a7c8f15760c881",
+    "data/treecut/trials.jsonl": "1dabad6028e0483b8c0c1930e9087edaa31bfe5207ee287f88dc46c5ddc821df",
+    "data/treecut/candidates_5000/pairs.jsonl": "d53f4a662b930d7e3b2c0acf1b2b83056df1c341013c3d1eadc01b44009b61b7",
+    "data/treecut/candidates_5000/manifest.jsonl": "a52ca8616f9dc509e693896778227e23fb947cb181191094666ce8590696ed72",
+    "data/treecut/candidates_5000/passed_pairs.jsonl": "6f5e7e10345f3e9e03b2828fe0da4e61b56d991a97647421172ebc34c20b8b72",
+    "data/treecut/candidates_5000/failed_pairs.jsonl": "a77287a049c39722d23f0d64b493bb1363038a0c4e71cdef7824ed0871e64c27",
+    "data/treecut/candidates_5000/provenance.json": "5c3d8fc4a78a57cc649a74bcc61f975d1989431d80f4c89952b3275cd1431e93"
+  },
+  "candidate_pool": "data/treecut/candidates_5000",
+  "manual_listening": "representative review pending; prior pilot delivered for review",
+  "full_audio": "No condition or waveform truncated; both complete WAVs strictly <30s; full grapheme coverage verified"
+}

@@ -1,0 +1,10 @@
+{
+  "model": "af_next",
+  "tokenizer_path": "models/af_next",
+  "slow": false,
+  "tokenizer_fingerprint": "2753e48f514404d9b58ae9a8f7b8259cfe0ef8f95cffe2c87d0b264257705f92",
+  "fixtures_passed": 5,
+  "native_stop_token_ids": {},
+  "byte_decode_verified": true,
+  "model_inference": false
+}

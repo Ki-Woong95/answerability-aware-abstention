@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_future_phase2b_regression_contracts",
+  "not_dataset_or_model_outputs": true,
+  "cases": [
+    {
+      "name": "split_sentence",
+      "model": "af_next",
+      "pieces": [
+        "Done",
+        ".",
+        " Next"
+      ],
+      "expected_checkpoints": [
+        3
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "separator_same_token",
+      "model": "af_next",
+      "pieces": [
+        "Done. "
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "interior_boundary",
+      "model": "af_next",
+      "pieces": [
+        "Done. Next"
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "decimal",
+      "model": "af_next",
+      "pieces": [
+        "Value 3",
+        ".",
+        "14",
+        " units"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "decimal_then_sentence",
+      "model": "af_next",
+      "pieces": [
+        "Value 3",
+        ".",
+        "14",
+        ".",
+        " Next"
+      ],
+      "expected_checkpoints": [
+        5
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "leading_decimal",
+      "model": "af_next",
+      "pieces": [
+        "Value ",
+        ".",
+        "5",
+        " units"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "numeric_separator",
+      "model": "af_next",
+      "pieces": [
+        "Cost 1",
+        ".",
+        "000",
+        " units"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "dotted_version",
+      "model": "af_next",
+      "pieces": [
+        "Version 1",
+        ".",
+        "2",
+        ".",
+        "3",
+        " works"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "abbreviation",
+      "model": "af_next",
+      "pieces": [
+        "Ask Dr",
+        ".",
+        " Smith"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "dotted_abbreviation",
+      "model": "af_next",
+      "pieces": [
+        "Use e",
+        ".",
+        "g",
+        ".",
+        " examples"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "acronym",
+      "model": "af_next",
+      "pieces": [
+        "In U",
+        ".",
+        "S",
+        ".",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "numbered_list",
+      "model": "af_next",
+      "pieces": [
+        "1",
+        ".",
+        " Step"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "letter_list",
+      "model": "af_next",
+      "pieces": [
+        "A",
+        ".",
+        " Step"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "roman_list",
+      "model": "af_next",
+      "pieces": [
+        "IV",
+        ".",
+        " Step"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "numeric_terminal_sentence",
+      "model": "af_next",
+      "pieces": [
+        "Result 2",
+        ".",
+        " Next"
+      ],
+      "expected_checkpoints": [
+        3
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "semicolon",
+      "model": "af_next",
+      "pieces": [
+        "Enough",
+        ";",
+        " reconsider"
+      ],
+      "expected_checkpoints": [
+        3
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "numeric_semicolon",
+      "model": "af_next",
+      "pieces": [
+        "1",
+        ";",
+        "2"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "closing_quote",
+      "model": "af_next",
+      "pieces": [
+        "Done.\"",
+        " Next"
+      ],
+      "expected_checkpoints": [
+        2
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "question_exclamation_cluster",
+      "model": "af_next",
+      "pieces": [
+        "Why?",
+        "!",
+        " Next"
+      ],
+      "expected_checkpoints": [
+        3
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "multiple_boundaries_one_token",
+      "model": "af_next",
+      "pieces": [
+        "First. Second. "
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        2
+      ]
+    },
+    {
+      "name": "ellipsis",
+      "model": "af_next",
+      "pieces": [
+        "Maybe",
+        "...",
+        " next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "url",
+      "model": "af_next",
+      "pieces": [
+        "https://example",
+        ".",
+        "com/path?x=1",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "email",
+      "model": "af_next",
+      "pieces": [
+        "name@example",
+        ".",
+        "com",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "inline_code",
+      "model": "af_next",
+      "pieces": [
+        "`value3.14;`",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "entity",
+      "model": "af_next",
+      "pieces": [
+        "&amp",
+        ";",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "pending_at_end",
+      "model": "af_next",
+      "pieces": [
+        "Done",
+        "."
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "comma_excluded",
+      "model": "af_next",
+      "pieces": [
+        "Hello",
+        ",",
+        " Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "newline_not_boundary",
+      "model": "af_next",
+      "pieces": [
+        "Done",
+        "\n",
+        "Next"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "direct_final",
+      "model": "af_next",
+      "pieces": [
+        "FINAL:",
+        " I don't know.",
+        "\n"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "FINAL:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "reason_stops",
+      "model": "af_next",
+      "pieces": [
+        "REASON: Missing. ",
+        "More reasoning. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "fragmented_reason",
+      "model": "af_next",
+      "pieces": [
+        "REA",
+        "SON",
+        ": Missing. ",
+        "Later. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "fragmented_final",
+      "model": "af_next",
+      "pieces": [
+        "FI",
+        "NAL",
+        ": 42. ",
+        "Later. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "FINAL:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "same_token_stop_veto",
+      "model": "af_next",
+      "pieces": [
+        "Done.",
+        "\nREASON: Missing. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "same_token_interior_veto",
+      "model": "af_next",
+      "pieces": [
+        "Done. Next\nFINAL: 42"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "FINAL:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "previous_token_retained",
+      "model": "af_next",
+      "pieces": [
+        "Done. ",
+        "\nREASON: Missing. "
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "case_indentation_crlf",
+      "model": "af_next",
+      "pieces": [
+        "Done. ",
+        "\r\n  reason : Missing. "
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "inline_word_not_marker",
+      "model": "af_next",
+      "pieces": [
+        "We give a reason: enough. ",
+        "Next"
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "stop_irreversible",
+      "model": "af_next",
+      "pieces": [
+        "REASON: Missing. ",
+        "\nMore. ",
+        "\n<THINK>New. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "REASON:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "literal_code_marker_stops",
+      "model": "af_next",
+      "pieces": [
+        "```\nFINAL: Example.\n```",
+        "Later. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "FINAL:",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "ar_response_direct",
+      "model": "audio-reasoner",
+      "pieces": [
+        "<RESPONSE>",
+        "Answer. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "<RESPONSE>",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "ar_think_close",
+      "model": "audio-reasoner",
+      "pieces": [
+        "Reasoning. ",
+        "</THINK>",
+        "<RESPONSE>Answer. "
+      ],
+      "expected_checkpoints": [
+        1
+      ],
+      "expected_stop_marker": "</THINK>",
+      "expected_boundary_counts": [
+        1
+      ]
+    },
+    {
+      "name": "ar_response_fragmented",
+      "model": "audio-reasoner",
+      "pieces": [
+        "Reasoning.",
+        "<RESP",
+        "ONSE>Answer. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "<RESPONSE>",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "ar_same_token_close_veto",
+      "model": "audio-reasoner",
+      "pieces": [
+        "<THINK>Reasoning. </THINK>"
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "</THINK>",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "ar_subsection_close_not_stop",
+      "model": "audio-reasoner",
+      "pieces": [
+        "<THINK><REASONING>Enough. ",
+        "</REASONING>\n<SUMMARY>Continue. "
+      ],
+      "expected_checkpoints": [
+        1,
+        2
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ar_stop_cannot_reopen",
+      "model": "audio-reasoner",
+      "pieces": [
+        "</THINK>",
+        "<THINK>New. "
+      ],
+      "expected_checkpoints": [],
+      "expected_stop_marker": "</THINK>",
+      "expected_boundary_counts": []
+    },
+    {
+      "name": "utf8_committed_text",
+      "model": "af_next",
+      "pieces": [
+        "결론",
+        ".",
+        " 다음"
+      ],
+      "expected_checkpoints": [
+        3
+      ],
+      "expected_stop_marker": null,
+      "expected_boundary_counts": [
+        1
+      ]
+    }
+  ]
+}
